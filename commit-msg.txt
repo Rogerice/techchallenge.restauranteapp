@@ -1,0 +1,41 @@
+feat(api): entrega Fase 02 — CRUDs (Tipos de Usuário, Restaurantes, Itens) + testes (~88,7%) + docs/Docker
+
+Contexto
+- Implementação alinhada ao Tech Challenge Fase 02.
+- Objetivo: disponibilizar CRUDs de Tipo de Usuário, Restaurante e Item do Cardápio, organizados em camadas e com testes automatizados.
+
+Arquitetura / Organização (Clean Architecture)
+- Domain: modelos de negócio e contratos.
+- Application: services e orquestração.
+- Infrastructure: controllers REST, repositórios JPA, mapeamentos e configs.
+- Separação de responsabilidades para facilitar manutenção, testes e escalabilidade.
+
+Funcionalidades (CRUDs)
+- Tipo de Usuário: criar, listar, buscar por id, atualizar, excluir.
+- Restaurante: nome, cnpj (único), endereco, tipoCozinha, horarioFuncionamento, dono (Usuario).
+- Item do Cardápio: nome, descricao, preco, disponivel, somenteNoLocal, caminhoFoto, relacionamento com Restaurante.
+
+Persistência (JPA)
+- UsuarioEntity, RestauranteEntity, ItemCardapioEntity, TipoUsuarioEntity.
+- Relacionamentos e constraints via anotações (@Entity, @Column, @ManyToOne, @Enumerated etc.).
+
+Validações (Domain models)
+- Bean Validation (ex.: @NotBlank, @NotNull, @DecimalMin para preco > 0).
+
+Testes
+- Cobertura total ~88,7% (EclEmma).
+- Testes de Service/Repository/Controller com H2.
+- Testes de entidade/POJO usando PojoTestUtils (getters/setters/equals/hashCode/toString).
+- Ajustes para dados únicos em campos com constraints (e.g., CNPJ/EMAIL).
+- Testes de exceção e ApiExceptionHandler.
+
+Documentação e Execução
+- README com arquitetura, endpoints, como rodar (Maven/Spring Boot) e via Docker Compose.
+- Collections para testar endpoints.
+- Docker Compose para subir app + DB.
+- .gitignore atualizado.
+
+Motivação
+- Atende aos itens de avaliação da Fase 2: funcionalidade, qualidade do código, documentação, collections, docker, repo público, clean architecture e cobertura ≥80%.
+
+Refs: Tech Challenge — Fase 02
