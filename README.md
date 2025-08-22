@@ -30,12 +30,12 @@ Desenvolvida com **Spring Boot**, **PostgreSQL** e executada via **Docker Compos
 
 ---
 
-## baixar aplicação
+## Baixar aplicação
 ```bash
 git clone https://github.com/Rogerice/techchallenge.restauranteapp
    ```
 
-## gera o pacote
+## Gerar o pacote
 ```bash
 mvn clean package
    ```
