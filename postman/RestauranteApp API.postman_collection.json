@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "77036fb0-b451-41a7-87b4-48415e5a41b6",
+		"name": "RestauranteApp API",
+		"description": "Coleção minimalista para operar Restaurantes e Itens de Cardápio.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4315882"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Criar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Rogerio Rodriguedds\",\r\n  \"email\": \"rogerio@email.cosm\",\r\n  \"senha\": \"123456\",\r\n  \"tipoUsuario\": \"DONO\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuário por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nome\": \"Rogerio Atualizado  pelo usuario\", \r\n\"email\": \"rogerio@email.com\", \r\n\"senha\": \"123456\", \r\n\"tipoUsuario\": \"CLIENTE\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipos de Usuário",
+			"item": [
+				{
+					"name": "Criar TipoUsuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nomeTipo\": \r\n    \"Rogerio Rodrigues - DONO\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipos-usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipos-usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar TiposUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipos-usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipos-usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar TipoUsuario por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipos-usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipos-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar TipoUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nomeTipo\": \r\n\"Rogerio Rodrigues DONO (Atualizado)\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipos-usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipos-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar TipoUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipos-usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipos-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurantes",
+			"item": [
+				{
+					"name": "Criar Restaurante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Restaurante da Casa\",\n  \"cnpj\": \"12.345.678/0001-99\",\n  \"endereco\": \"Rua das Flores, 123\",\n  \"tipoCozinha\": \"BRASILEIRA\",\n  \"horarioFuncionamento\": \"10:00-22:00\",\n  \"donoUsuarioId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/restaurantes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Restaurantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/restaurantes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"restaurantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Restaurante por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/restaurantes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Restaurante",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Restaurante da Casa - Atualizado\",\n  \"cnpj\": \"12.345.678/0001-99\",\n  \"endereco\": \"Rua das Palmeiras, 456\",\n  \"tipoCozinha\": \"BRASILEIRA\",\n  \"horarioFuncionamento\": \"09:00-23:00\",\n  \"donoUsuarioId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/restaurantes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Restaurante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/restaurantes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Itens de Cardápio",
+			"item": [
+				{
+					"name": "Criar Item (restaurante 1)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Feijoada\",\n  \"descricao\": \"Feijoada completa\",\n  \"preco\": 45.99,\n  \"disponivel\": true,\n  \"caminhoFoto\": \"http://fotos/feijoada.png\",\n  \"somenteNoLocal\": false\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens/restaurantes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens",
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Itens (todos)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Itens por Restaurante (1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens/restaurantes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens",
+								"restaurantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Item por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Item (ID 1)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Feijoada (Grande)\",\n  \"descricao\": \"Feijoada completa tamanho família - ATUALIZADO\",\n  \"preco\": 69.90,\n  \"disponivel\": true,\n  \"caminhoFoto\": \"http://fotos/feijoada-grande.png\",\n  \"somenteNoLocal\": false,\n  \"restauranteId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Item (ID 1)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/cardapio/itens/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"cardapio",
+								"itens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "healthCheck-S2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}
